@@ -13,14 +13,14 @@ export type Todo = z.infer<typeof TodoSchema>;
 export const apiContract = c.router({
   getTodos: {
     method: 'GET',
-    path: '/api/todo',
+    path: '/todo',
     responses: {
       200: TodoSchema.array(),
     },
   },
   createTodo: {
     method: 'POST',
-    path: '/api/todo',
+    path: '/todo',
     body: z.object({
       text: z.string(),
     }),
